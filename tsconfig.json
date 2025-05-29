@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -19,39 +15,18 @@
     "isolatedModules": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    "types": [
-      "node",
-      "jest"
-    ],
+    "types": ["node", "jest"],
     "baseUrl": ".",
     "paths": {
-      "@pages": [
-        "src/pages"
-      ],
-      "@components": [
-        "src/components"
-      ],
-      "@ui": [
-        "src/components/ui"
-      ],
-      "@ui-pages": [
-        "src/components/ui/pages"
-      ],
-      "@utils-types": [
-        "src/utils/types"
-      ],
-      "@api": [
-        "src/utils/burgerApi.ts"
-      ],
-      "@slices": [
-        "src/services/slices"
-      ],
-      "@selectors": [
-        "src/services/selectors"
-      ]
+      "@pages": ["src/pages"],
+      "@components": ["src/components"],
+      "@ui": ["src/components/ui"],
+      "@ui-pages": ["src/components/ui/pages"],
+      "@utils-types": ["src/utils/types"],
+      "@api": ["src/utils/burger-api.ts"],
+      "@slices": ["src/services/slices"],
+      "@selectors": ["src/services/selectors"]
     }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

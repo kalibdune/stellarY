@@ -1,7 +1,7 @@
 import { FC, useState, SyntheticEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { forgotPasswordApi } from 'src/utils/burgerApi';
+import { forgotPasswordApi } from '@api';
 import { ForgotPasswordUI } from '@ui-pages';
 
 export const ForgotPassword: FC = () => {

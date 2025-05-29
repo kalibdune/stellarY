@@ -3,7 +3,7 @@ import { FC, SyntheticEvent, useEffect, useState } from 'react';
 import { AppDispatch, useDispatch, useSelector } from '../../services/store';
 import userEvent from '@testing-library/user-event';
 import { getUser, updateUser } from '../../services/slices/userSlice';
-import { TRegisterData } from 'src/utils/burgerApi';
+import { TRegisterData } from '@api';
 import { TUser } from '@utils-types';
 
 export const Profile: FC = () => {

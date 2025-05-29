@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TIngredient, TOrder } from '../../utils/types';
-import { orderBurgerApi } from 'src/utils/burgerApi';
+import { orderBurgerApi } from '@api';
 
 export const postOrder = createAsyncThunk(
   'burgerConstructor/postOrder',
