@@ -6,7 +6,7 @@ export const fetchOrders = createAsyncThunk<TFeedsResponse, void>(
   async () => await getFeedsApi()
 );
 
-type FeedState = {
+export type FeedState = {
   feeds: TFeedsResponse | null;
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   error: string | null;

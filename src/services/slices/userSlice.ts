@@ -85,20 +85,41 @@ export const userSlice = createSlice({
         state.isAuthChecked = true;
         state.isLoading = false;
       })
+      .addCase(registerUser.pending, (state) => {
+        state.isAuthChecked = true;
+        state.isLoading = true;
+      })
+      .addCase(registerUser.rejected, (state) => {
+        state.isAuthChecked = true;
+        state.isLoading = false;
+      })
+      .addCase(registerUser.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.isAuthChecked = true;
+        state.isLoading = false;
+      })
       .addCase(getUser.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(getUser.rejected, (state) => {
         state.isAuthChecked = true;
         state.isLoading = false;
+        state.user = null;
       })
       .addCase(getUser.fulfilled, (state, action) => {
         state.user = action.payload?.user!;
         state.isAuthChecked = true;
         state.isLoading = false;
       })
+      .addCase(updateUser.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(updateUser.rejected, (state) => {
+        state.isLoading = false;
+      })
       .addCase(updateUser.fulfilled, (state, action) => {
         state.user = action.payload.user;
+        state.isLoading = false;
       })
       .addCase(logoutUser.fulfilled, (state) => {
         state.user = null;

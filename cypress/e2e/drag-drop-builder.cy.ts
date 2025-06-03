@@ -7,13 +7,13 @@ describe('Бургер Конструктор', () => {
 
   function openModal() {
     cy.get("[data-cy='ingredients-items']").first()
-    .find("[data-cy='ingredient-container']").first()
-    .click();
+      .find("[data-cy='ingredient-container']").first()
+      .click();
   }
-  
+
   it('Добавление ингредиентов', () => {
     cy.get("[data-cy='noBuns']").should("have.length", 3);
-    
+
     cy.clickIngredientInIndexedContainer(0);
 
     cy.clickIngredientInIndexedContainer(1);
@@ -31,14 +31,14 @@ describe('Бургер Конструктор', () => {
       cy.get("[data-cy='modal']")
         .find("button")
         .click();
-        
+
       cy.checkModalViibility(false);
     });
 
     it('Закрытие на оверлэй', () => {
       cy.get("[data-cy='modal-overlay']")
-        .click({force: true})
-        
+        .click({ force: true })
+
       cy.checkModalViibility(false);
     });
   });
